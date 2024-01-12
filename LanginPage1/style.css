@@ -1,0 +1,64 @@
+:root {
+    --main-background: #52D3D8;
+    --secondary-background: #3887BE;
+    --secondary-text: #38419D;
+    --primary-text: #200E3A;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, var(--main-background), var(--secondary-background));
+    height: 100vh;
+}
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--main-background), var(--secondary-background));
+    transition: transform 5s ease, opacity 5s ease; 
+    opacity: 1; 
+}
+
+.circle1:hover {
+    transform: translateX(200px); 
+    opacity: 0;
+}
+
+.circle2 {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--main-background), var(--secondary-text));
+    transition: transform 5s ease, opacity 5s ease; 
+    opacity: 1; 
+}
+
+.circle2:hover {
+    transform: translateX(400px); 
+    opacity: 0;
+}
+
+.circle3 {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    transition: transform 5s ease, opacity 5s ease;
+    background: linear-gradient(to right, var(--main-background), var(--primary-text));
+}
+
+.circle3:hover {
+    transform: translateX(200px); 
+    opacity: 0;
+}
+
+.circles__center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
