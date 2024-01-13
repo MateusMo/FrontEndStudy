@@ -1,0 +1,73 @@
+:root {
+    --background-color-main: #071952;
+    --background-color-secondary: #0B666A;
+    --text-main: #35A29F;
+    --text-secondary: #97FEED;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 10px;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, var(--background-color-secondary), var(--background-color-main))
+}
+
+.first__square,
+.second__square,
+.third__square,
+.forth__square {
+    width: 50%;
+    height: 50%;
+    box-sizing: border-box;
+}
+
+.first__square {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.first__square_circle1 {
+    width: calc(30%);
+    height: calc(60%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-secondary), var(--text-main));
+    transition: transform 6s ease, opacity 6s ease;
+    opacity: 1;
+}
+
+.first__square_circle2 {
+    width: calc(20%);
+    height: calc(40%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-secondary), var(--text-main));
+    transition: transform 4s ease, opacity 4s ease;
+    opacity: 1;
+}
+
+.first__square_circle3 {
+    width: calc(10%);
+    height: calc(20%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-secondary), var(--text-main));
+    transition: transform 1s ease, opacity 1s ease;
+    opacity: 1;
+}
+
+.first__square:hover .first__square_circle1,
+.first__square:hover .first__square_circle2,
+.first__square:hover .first__square_circle3 {
+    transform: translateX(100%);
+    opacity: 0;
+}
