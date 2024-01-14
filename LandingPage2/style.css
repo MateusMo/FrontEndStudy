@@ -6,6 +6,7 @@
 }
 
 body {
+    color: var(--text-secondary);
     padding: 0;
     margin: 0;
     height: 100vh;
@@ -22,7 +23,7 @@ body {
     flex-wrap: wrap;
     background: linear-gradient(to right, var(--background-color-secondary), var(--background-color-main))
 }
-
+/* First square context */
 .first__square,
 .second__square,
 .third__square,
@@ -65,9 +66,180 @@ body {
     opacity: 1;
 }
 
+.first__square:hover{
+    background-color: var(--background-color-main);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
 .first__square:hover .first__square_circle1,
 .first__square:hover .first__square_circle2,
 .first__square:hover .first__square_circle3 {
     transform: translateX(100%);
     opacity: 0;
 }
+
+.label__first_square {
+    opacity: 0;
+    display: none;
+    transition: opacity 3s ease;
+}
+
+.first__square:hover .label__first_square {
+    display: block;
+    opacity: 1;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* Second square context */
+.second__square{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+.second__square_circle1 {
+    width: calc(10%);
+    height: calc(20%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--background-color-secondary), var(--background-color-main));
+    transition: transform 5s ease, opacity 5s ease, background 5s ease;
+    opacity: 1;
+}
+
+.second__square:hover{
+    background-color: var(--background-color-secondary);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.second__square_circle1:hover {
+    transform: scale(7.5); 
+    background: radial-gradient(circle at center, black 70%, transparent 70%); 
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8); 
+}
+
+.second__square:hover .second__square_circle1 {
+    opacity: 0;
+}
+
+.label__black_hole{
+    opacity: 0;
+    display: none;
+}
+
+.second__square_circle1:hover + .label__black_hole {
+    display: block;
+    cursor: pointer;
+    opacity: 1;
+    position: absolute;
+}
+
+/*Third square context*/
+
+.third__square {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.third__square_circle1 {
+    position: relative;
+    width: calc(30%);
+    height: calc(60%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-main), var(--text-main));
+}
+
+.little_dot {
+    position: absolute;
+    width: calc(10%);
+    height: calc(10%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-secondary), var(--text-main));
+    animation: orbit 5s linear infinite; 
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(1500%);
+    }
+    100% {
+        transform: rotate(180deg) translateX(800%);
+    }
+}
+
+.label__orbits{
+    display: none;
+}
+
+.third__square:hover{
+    background-color: var(--background-color-secondary);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.third__square:hover .label__orbits{
+    display: block;
+    position: absolute;
+}
+
+/*Forth square context*/
+
+.forth__square {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.forth__square_circle1{
+    position: relative;
+    width: calc(30%);
+    height: calc(60%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-secondary), var(--text-main));
+}
+
+.eclipse__circle{
+    position: relative;
+    width: calc(20%);
+    height: calc(20%);
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--text-secondary), var(--background-color-main));
+    animation: eclipse 15s linear infinite; 
+}
+
+@keyframes eclipse {
+    0% {
+        transform: rotate(30deg) translateX(200%);
+    }
+    100% {
+        transform: rotate(90deg) translateX(200%);
+    }
+}
+
+.label__eclipse{
+    display: none;
+}
+
+.forth__square:hover{
+    background-color: var(--background-color-main);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.forth__square:hover .label__eclipse{
+    display: block;
+    position: absolute;
+    color: var(--background-color-main);
+}
+
+
+
+
