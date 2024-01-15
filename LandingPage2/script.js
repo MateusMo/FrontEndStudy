@@ -47,13 +47,11 @@ function getRandomColor() {
 function changeGalaxy() {
     const root = document.documentElement;
 
-    // Generate random colors close to space colors
     const mainColor = getRandomColor();
     const secondaryColor = getRandomColor();
     const textMainColor = getRandomColor();
     const textSecondaryColor = getRandomColor();
 
-    // Update CSS variables with the random colors
     root.style.setProperty('--background-color-main', mainColor);
     root.style.setProperty('--background-color-secondary', secondaryColor);
     root.style.setProperty('--text-main', textMainColor);
