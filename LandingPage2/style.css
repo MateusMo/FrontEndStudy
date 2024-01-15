@@ -20,6 +20,8 @@ body {
 .container {
     height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     background: linear-gradient(to right, var(--background-color-secondary), var(--background-color-main))
 }
@@ -240,6 +242,32 @@ body {
     color: var(--background-color-main);
 }
 
+/*Btn Context*/
+
+.change__galaxy{
+    position: absolute;
+}
+
+.btn{
+    background:inherit;
+    font: inherit;
+    color: var(--background-color-main);
+    border: none;
+}
+
+.btn:hover{
+    cursor: pointer;
+    color: inherit;
+}
+
+/* Sound context */
+
+#hoverSound_first__Square,
+#hoverSound_second__Square,
+#hoverSound_third__Square,
+#hoverSound_forth__Square{
+    display: none;
+}
 
 
 
